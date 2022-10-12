@@ -1,0 +1,204 @@
+#python2 10.03
+
+for x in range(0,10):
+    print(x,end = '')
+a=input("input:")
+type(a)
+a,b,c=(input("请输入三角形三边的长:").split())
+a = int(a)
+b = int(b)
+c = int(c)
+p=(a+b+c)/2
+s=(p*(p-a)*(p-b)*(p-c))**0.5
+print("三角形面积为：",format(s,'.2f'))
+print("程序处理时间为：%.2f"%(s))
+str1="hello world"
+print(str1.count('lo'))
+print(str1.count('lo',5,len(str1)))
+import matplotlib.pyplot
+import sys
+print("sys.path")
+print('n=',123)
+path="path=/%'相对路径'../n"
+print(path)
+char = '明月几时有'
+char = char.replace(char,'明月出天山')
+my_list = ['宝玉','黛玉','宝钗']
+my_list.append('晴雯')
+my_list
+s = ['古藤','老树','瘦马']
+s[2] = '昏鸦'
+s
+tuple1 = tuple([1,2])
+tuple1[1]  = 10
+my_dict = {'姓名':'张飞','性别':'男','身高':180}
+my_dict['身高'] = 48
+my_dict['宝贝'] = '赤兔马'
+print('字典：',my_dict) 
+dict2={'name':'lin','age':21}
+print(dict2['name'])
+print(dict2)
+dict2['age'] = 123
+print(dict2)
+dict1 = dict([('name','kyda'),('e',10)])
+dict1
+dict3 = {'one':['beijing','hebei']}
+dict3
+dict3['one']
+kk = {'leixing':'1','zr':'eh'}
+hh = {'leixing':'2','zr':'jl'}
+ss = {'leixing':'3','zr':'aw'}
+gg = [kk,hh,ss]
+for ii in gg:
+    print(ii['leixing'],ii['zr'],end = '')
+    print()
+x = {'小明':{'联系电话':'19821441437','地址':'地球'}}
+for i in range(10):
+    print(x,i)
+    print()
+set1 = set('kydaa')
+set1
+colors = {'red','blue','pink'}
+sizes = {36,37,38,39}
+result = {c + str(s) for c in colors for s in sizes}
+print(result)
+dreamers = {'ljl','wc','xy','zb','lsy'}
+girls = {'mmf','lsy','syj'}
+result = dreamers.difference(girls)
+print(result)
+dreamers.difference_update(girls)
+print(dreamers)
+result = dreamers.union(girls)
+print(result)
+dreamers.update(girls)
+print(dreamers)
+result = dreamers.intersection(girls)
+print(result)
+girls.intersection_update(girls)
+print(girls)
+#上机2 9/15
+
+import math
+help(math)
+help(math.sin)
+help('str')
+
+bin(20)
+bin(20.10)
+
+list1 = [3,5,1,3,6,97,64]
+list1.sort()
+list1
+list1.sort(reverse = True)
+math.cos(math.pi/4)
+
+import random
+random.sample(range(10),100)
+random.randrange(100)
+random.choice(['关羽','张飞','赵云','马超'])
+
+import statistics as st
+st.mean([1,2,3,4,5,6,7,8,9])
+st.harmonic_mean([4,5,7])
+st.median([1,4,7,10])
+st.mode([1,2,2,3,4])
+
+import time
+start = time.time()
+for i in range(10000000):
+    pass
+end = time.time()
+print("循环运行时间：%.2f秒"%(end-start))
+
+import calendar
+cal = calendar.month(2021,3)
+print(cal)
+
+c = calendar.calendar(2122)
+print(c)
+def my_print(text,delay = 0.2):
+    for ch in text:
+        print(ch,end='')
+        time.sleep(delay)
+my_print('咔咔咔咔咔咔扩买买买，\n原谅周围的人，\n哈哈哈哈哈\n   ——莫言')
+
+def add(x,y):
+    return x+y
+print(add(66,33))
+print(add("三国","演义"))
+def multi_sum(*args):
+    s=0
+    for item in args:
+        s+= item
+    return s
+x = multi_sum(3,4,5)
+print(x)
+def test():
+    return 'Python',520
+print(test())
+type(test())
+def test3():
+    global txt
+    txt = 'Python 语言学习'
+    print(txt)
+test3()
+print('全局变量的txt的值为：',txt)
+
+def is_odd(n):
+    return n%2 ==1
+s = list(filter(is_odd,[1,2,4,5,6,9,10,15]))
+s
+calc = lambda x,y:x**y
+print(calc(2,5))
+
+
+
+a1 = str(75901)
+print(a1)
+a1[::-2]
+
+# 匿名函数的应用场景
+li = [-21,-13,5,9,36]
+print(sorted(li,key = lambda x:abs(x)))
+li = ['bad','about','Zoo','Credit']
+print(sorted(li,key = lambda x:x[0]))
+for i in range(1,11):
+    print(i,end = '')
+import python_test0928
+
+import demo
+from demo import*
+from demo import add
+demo.add.add(2,6)
+import demo.div
+demo.mul.mul(4,5)
+
+demo.div.div(1,0)
+
+
+import demo.four
+demo.four.sub(4,7)
+demo.four.div(10,2)
+
+import MC
+MC.pi_time()
+
+MC.write_file()
+# =============================================================================
+# 
+# 面向对象 Pyhon3
+# 
+# =============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
